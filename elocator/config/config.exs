@@ -8,6 +8,12 @@ use Mix.Config
 # if you want to provide default values for your application for
 # 3rd-party users, it should be done in your "mix.exs" file.
 
+config :elocator, Elocator.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "elocator",
+  username: "elocator",
+  password: "password"
+
 # You can configure for your application as:
 #
 #     config :elocator, key: :value

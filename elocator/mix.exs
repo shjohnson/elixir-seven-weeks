@@ -14,7 +14,8 @@ defmodule Elocator.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :postgrex, :ecto],
+     mod: {Elocator, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +28,9 @@ defmodule Elocator.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:postgrex, ">= 0.0.0"},
+      {:ecto, "~> 1.0"}
+    ]
   end
 end
